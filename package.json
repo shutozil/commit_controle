@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "husky-train",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "precommit": "node test/precommit.js"
   },
   "repository": {
     "type": "git",
@@ -16,6 +17,11 @@
   },
   "homepage": "https://github.com/shutozil/commit_controle#readme",
   "devDependencies": {
-    "husky": "^6.0.0"
+    "husky": "4.2.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run precommit"
+    }
   }
 }
