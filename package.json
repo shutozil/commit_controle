@@ -16,6 +16,17 @@
   },
   "homepage": "https://github.com/shutozil/commit_controle#readme",
   "devDependencies": {
-    "husky": "^6.0.0"
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --ext .js --fix"
+    ]
   }
 }
