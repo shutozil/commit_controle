@@ -4,7 +4,8 @@
   "description": "husky-train",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "precommit": "node test/precommit.js"
+    "precommit": "node test/precommit.js",
+    "lint-staged": "lint-staged"
   },
   "repository": {
     "type": "git",
@@ -17,11 +18,17 @@
   },
   "homepage": "https://github.com/shutozil/commit_controle#readme",
   "devDependencies": {
-    "husky": "4.2.5"
+    "husky": "4.2.5",
+    "lint-staged": "^10.2.11"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run precommit"
+      "pre-commit": "npm run precommit && npm run lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --ext .js --fix"
+    ]
   }
 }
