@@ -1,0 +1,21 @@
+{
+  "name": "commit_controle",
+  "version": "1.0.0",
+  "description": "husky-train",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shutozil/commit_controle.git"
+  },
+  "author": "shutoinoue",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shutozil/commit_controle/issues"
+  },
+  "homepage": "https://github.com/shutozil/commit_controle#readme",
+  "devDependencies": {
+    "husky": "^6.0.0"
+  }
+}
